@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(65, 65, 112);
+    color: white;
+    
+}
+
+h1 {
+    font-size: 36px;
+    letter-spacing: 3px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.button-link {
+    color: black;
+}
+
+.button-link:hover {
+    color: white;
+}
+
+#top {
+    width: 50vw;
+    height: 25px;
+    background-color: black;
+    font-size: 24px;
+    padding: 5px;
+}
+
+#creating {
+    font-size: 20px;
+    background-color: black;
+    width: 190px;
+    height: 22px;
+    text-align: center;
+}
+
+.edit-button {
+    background-color: gray;
+    font-weight: bold;
+}
+
+.edit-button:hover {
+    background-color: black;
+}
+
+#delete-color {
+    background-color: orange;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+#delete-color:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.label-color {
+    color: orange;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.back-link {
+    background-color: black;
+    color: yellow;
+    font-size: 20px;
+}

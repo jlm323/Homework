@@ -4,10 +4,11 @@ const express = require('express');
 // create a special router object for our routes
 const router = express.Router();
 
-const Log = require('../models/logs')
+// const Log = require('../models/logs')
+
 
 // bring in controller functions
-const { findAllLogs, showNewView, createNewLog, showOneLog } = require('../controllers/logsController')
+const { findAllLogs, showNewView, deleteALog, updateOneLog, createNewLog, showEditView, seedStarterData, showOneLog } = require('../controllers/logsController')
 
 
 // setup index route
@@ -17,19 +18,19 @@ router.get('/', findAllLogs);
 router.get('/new', showNewView)
 
 //setup Delete route
-// router.delete('/:id', deleteAMeat)
+router.delete('/:id', deleteALog)
 
 // setup update route
-// router.put('/:id', updateOneMeat)
+router.put('/:id', updateOneLog)
 
 // setup create route
 router.post('/', createNewLog);
 
 // setup edit route
-// router.get('/:id/edit', showEditView)
+router.get('/:id/edit', showEditView)
 
 // setup 'seed' route
-// router.get('/seed', seedStarterData)
+router.get('/seed', seedStarterData)
 
 // clear route
 // router.get('/clear', clearData)

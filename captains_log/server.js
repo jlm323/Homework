@@ -3,16 +3,17 @@ const express = require('express');
 
 const methodOverride = require('method-override');
 
-// create express app
-const app = express();
-
 // bring in mongoConfig
 const mongoConfig = require('./config')
 
+// establish port
+require('dotenv').config()
+
+// create express app
+const app = express();
+
 // bring in packaged route
 const logRoutes = require('./routes/logRoutes');
-
-require('dotenv').config()
 
 // port
 const port = process.env.PORT;

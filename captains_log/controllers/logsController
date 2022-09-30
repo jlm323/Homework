@@ -1,0 +1,55 @@
+const Log = require('../models/logs')
+
+// bring in seed data
+// const seed = require('../models/seed');
+
+// route - index
+const findAllLogs = (req, res) => {
+    Log.find({}, (err, foundLog) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('index', { logs: foundLog })
+        }
+    })
+}
+
+// route - new
+const showNewView = (req, res) => {
+    res.render('new');
+}
+
+// route - create
+const createNewLog = (req, res) => {
+    if (req.body.shipIsBroken === "on") {
+        req.body.shipIsBroken = true;
+    } else {
+        req.body.shipIsBroken = false;
+    }
+    
+    Log.create(req.body, (err, createdLog) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect('/')
+        }
+    })
+}
+
+// route - show
+const showOneLog = (req, res) => {
+    Log.findById(req.params.id, (err, foundLog) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('Show', { log: foundLog })
+        }
+    })
+}
+
+module.exports = {
+    findAllLogs,
+    showNewView,
+    createNewLog,
+    showOneLog
+}

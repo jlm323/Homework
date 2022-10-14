@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa');
+body {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+h4 {
+    color: rgb(0, 60, 151);
+}
+
+.container {
+    width: 100%;
+    background-color: rgb(251, 205, 255);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 100px 200px 200px;
+    grid-template-areas: 
+    ". sidebar reviews rating analysis ."
+    ". sidebar reviews rating analysis ."
+    ". sidebar visitors visitors visitors ."
+    ". sidebar visitors visitors visitors ."
+    ;
+    grid-gap: 10px;
+}
+
+.side-bar, .analysis, .rating, .reviews, .visitors {
+    background-color: rgb(212, 153, 212);
+    margin: 10px;
+    padding-left: 10px;
+    box-shadow: 10px 5px 15px gray;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    padding-top: 45%;
+}
+
+.link {
+    color: rgb(0, 60, 151);
+}
+
+.link:hover {
+    color: rgb(23, 185, 185);
+}
+
+.reviews {
+    grid-area: reviews;
+}
+
+.rating {
+    grid-area: rating;
+}
+
+.analysis {
+    grid-area: analysis;
+}
+
+.data {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(37, 18, 107);
+    font-weight: bold;
+}
+
+.vis-data, .rev-data, .rating-data {
+    color: rgb(37, 18, 107);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.visitors {
+    grid-area: visitors;
+}
+
+.graph {
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+img {
+    width: 350px;
+    box-shadow: 3px 3px 10px gray;
+}
+
+.pos-neg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.pos, .neg {
+    color: rgb(212, 212, 212);
+    font-size: 14px;
+    background-color: rgb(129, 63, 129);
+    box-shadow: 3px 3px 10px gray;
+    margin: 5px;
+    padding: 10px;
+}

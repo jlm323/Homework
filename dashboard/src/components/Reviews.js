@@ -1,15 +1,14 @@
-function Reviews() {
+function Reviews(props) {
     return(
         <div className="reviews">
             <h4>Reviews</h4>
-            <p className="rev-data">1,281</p>
+            <p className="rev-data">{props.reviews}</p>
+            <span className="read"> Click to read reviews:</span>
             <div className="pos-neg">
                 <p className="pos">
-                    960<br/>
                     Positive
                 </p>
                 <p className="neg">
-                    321<br/>
                     Negative
                 </p>
             </div>

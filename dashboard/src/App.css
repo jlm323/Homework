@@ -84,6 +84,10 @@ img {
     box-shadow: 3px 3px 10px gray;
 }
 
+.read {
+    font-size: 12px;
+}
+
 .pos-neg {
     display: flex;
     flex-direction: row;
@@ -93,9 +97,13 @@ img {
 
 .pos, .neg {
     color: rgb(212, 212, 212);
-    font-size: 14px;
+    font-size: 12px;
     background-color: rgb(129, 63, 129);
     box-shadow: 3px 3px 10px gray;
     margin: 5px;
     padding: 10px;
+}
+
+.pos:hover, .neg:hover {
+    color: rgb(23, 185, 185);
 }
